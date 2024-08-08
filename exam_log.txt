@@ -1,0 +1,90 @@
+    1  package install proot-distro
+    2  pkg install proot-distro
+    3  proot-distro install ubuntu
+    4  proot-distro login ubuntu
+    5  pkg upgrade
+    6  pkg install cmatrix
+    7  cmatrix
+    8  pkg install cmatrix
+    9  cmatrix
+   10  pk install git -y
+   11  pkg install git -y
+   12  exit
+   13  git branch master
+   14  git init
+   15  git add commands.log
+   16  git commit -m "Add recorded commands log"
+   17  git config --global user.email masilianj@gmail.com
+   18  git commit -m "Add recorded commands log"
+   19  git config --global user.name Jm344
+   20  git commit -m "Add recorded commands log"
+   21  git remote add origin https://github.com/your-username/your-repo.git
+   22  git remote add origin https://github.com/Jm344/-reo.git
+   23  git remote add origin https://github.com/Jm344/repo.git
+   24  git push -u origin master
+   25  git remote add origin https://github.com/Jm344/231014513-Masilian.git
+   26  git remote set-url origin https://github.com/Jm344/231014513-Masilian.git
+   27  git push -u origin master
+   28  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@github.com
+   29  git remote set-url origin https://Jm344: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@github.com/Jm344/231014513-MASILIAN.git.git
+   30  git push -u origin master
+   31  git push
+   32  git push --set-upstream origin master
+   33  git push
+   34  git push master
+   35  'push.autoSetupRemote'
+   36  push.autoSetupRemote:
+   37  git help config
+   38  git help config.
+   39  git remote -v
+   40  git push --set-upstream origin master
+   41  git remote -v
+   42  rigin  https://Jm344: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@github.com/Jm344/231014513-MASILIAN.gi
+   43  origin  https://Jm344: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@github.com/Jm344/231014513-MASILIAN.git
+   44  git remote set-url origin https://Jm344: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@github.com/Jm344/231014513-MASILIAN.git
+   45  git push -u origin master
+   46  git push
+   47  git push -master
+   48  git pull origin master
+   49  git push origin master
+   50  git push -f origin master
+   51  exit
+   52  pkg help
+   53  cleqr
+   54  clear
+   55  ls
+   56  exit
+   57  histoy
+   58  history
+   59  ls
+   60  231014513-Masilian
+   61  cd 231014513-Masilian
+   62  ls
+   63  linux_practice
+   64  cd linux_practice
+   65  ssh -V
+   66  php -v
+   67  pkg install php
+   68  php -v
+   69  mysql --version
+   70  pkg install mariadb
+   71  mysql --version
+   72  apache2 -v
+   73  python3 --version
+   74  javac --version
+   75  pkg install apache
+   76  pkg install apache2
+   77  apache2 -v
+   78  apache2 --version
+   79  gh repo clone <your-repo-url>
+   80  gh repo clone https://github.com/Jm344/231014513-Masilian.git
+   81  gh auth login
+   82  gh repo clone https://github.com/Jm344/231014513-Masilian.git
+   83  gh auth login
+   84  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
+   85  gh auth login
+   86  cd 231014513-Masilian
+   87  cd..
+   88  cd ..
+   89  git checkout -b finalexam
+   90  history > exam_log.txt
