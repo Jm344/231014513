@@ -1,0 +1,45 @@
+    1  mkdir
+    2  mkdir linux_practice
+    3  cd linux_practice
+    4  touch notes.txt
+    5  ls >>notes.txt
+    6  cat.notes.txt
+    7  cat notes.txt
+    8  echo "Hello, Linux!">notes.txt
+    9  echo "Hello, Linux!"
+   10  echo "This is a practical exam."
+   11  head -n 1 notes.txt
+   12  tail -n 1 notes.txt
+   13  mkdir subdir
+   14  mv notes.txt subdir/
+   15  my subdir practice_subdir
+   16  mv subdir practice_subdir
+   17  cp notes.txt
+   18  cp notes.txt copy-linux_practice
+   19  ls
+   20  cd..
+   21  cd ..
+   22  ssh -V
+   23  php -v
+   24  mysql --version
+   25  apache2 -v
+   26  apache2 --version
+   27  python3 --version
+   28  javac --version
+   29  gh repo clone https://github.com/Jm344/231014513-MASILIAN.git
+   30  gh auth login
+   31  cd 231014513-Masilian
+   32  git checkout -b finalexam
+   33  date
+   34  time
+   35  usage
+   36  calc
+   37  cal
+   38  top
+   39  cd 231014513-MASILIAN
+   40  gh repo clone https://github.com/Jm344/231014513-MASILIAN.git
+   41  gh auth login
+   42  history > exam_log.txt
+   43  git commit -m "Added exam_log.txt with command history"
+   44  git checkout -b finalexam
+   45  history > exam_log.txt
