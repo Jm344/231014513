@@ -1,96 +1,93 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    color: #333;
-}
-
-.resume {
-    width: 60%;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-header {
+header, section {
+    padding: 60px 20px;
     text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
     margin-bottom: 30px;
-    background-color: #004b8d;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
 }
 
-header h1 {
-    font-size: 36px;
-    color: #ffffff;
+.cta-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-header p {
-    font-size: 16px;
-    color: #d1e7f5;
+.cta-button:hover {
+    background-color: #0077cc;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Styles */
+section {
+    background-color: #f4f4f4;
+}
+
+.section-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 24px;
-    color: #004b8d;
-    border-bottom: 2px solid #004b8d;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-section {
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul li {
-    font-size: 18px;
-    margin: 5px 0;
-    color: #333;
-}
-
-.skills ul li,
-.experience ul li {
-    font-size: 16px;
-    color: #555;
-}
-
-.experience p,
-.skills p {
-    font-size: 18px;
-    color: #333;
-}
-
-.contact p {
-    font-size: 16px;
-    color: #004b8d;
-}
-
-footer {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 20px;
-    color: #aaa;
-}
-
-footer a {
-    text-decoration: none;
-    color: #004b8d;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid

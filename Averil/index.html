@@ -3,14 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trail Buddy - Your Trusted Tour Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="image">
-        <img src="cover-photo-mount-pulag.jpg" alt="welcome_img" class="welcome_img">
-    </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explore the World with Trail Buddy</h1>
+            <p>Your trusted tour guides for unforgettable adventures</p>
+            <a href="#contact" class="cta-button">Book a Tour</a>
+        </div>
+    </header>
 
-    </div>
-    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Tours</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2>About Trail Buddy</h2>
+            <p>At Trail Buddy, we offer customized tour experiences with knowledgeable guides to help you explore the most stunning landscapes, hidden gems, and local cultures. Whether you're seeking mountain trails, city tours, or nature escapes, we have the perfect journey for you.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-container">
+            <h2>Our Tours</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Mountain Adventures</h3>
+                    <p>Join us for a guided hike to the most scenic mountain peaks, perfect for nature lovers and adventure seekers.</p>
+                </div>
+                <div class="service-item">
+                    <h3>City Sightseeing</h3>
+                    <p>Discover the rich history and vibrant culture of cities with expert guides who know all the best spots.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Nature Walks</h3>
+                    <p>Relax and reconnect with nature on our leisurely walks through forests, parks, and nature reserves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Trail Buddy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
