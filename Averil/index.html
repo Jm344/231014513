@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trail Buddy - Your Trusted Tour Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Hero Section -->
     <header class="hero">
+        <nav class="navbar">
+            <a href="#home" class="logo">Trail Buddy</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Tours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="burger" onclick="toggleNav()">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
         <div class="hero-content">
             <h1>Explore the World with Trail Buddy</h1>
             <p>Your trusted tour guides for unforgettable adventures</p>
@@ -16,62 +30,62 @@
         </div>
     </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Tours</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
+    <!-- About Section -->
     <section id="about" class="about">
-        <div class="section-container">
+        <div class="container">
             <h2>About Trail Buddy</h2>
-            <p>At Trail Buddy, we offer customized tour experiences with knowledgeable guides to help you explore the most stunning landscapes, hidden gems, and local cultures. Whether you're seeking mountain trails, city tours, or nature escapes, we have the perfect journey for you.</p>
+            <p>At Trail Buddy, we craft bespoke journeys, connecting you with the essence of every place we visit. Experience travel like never before with our sustainable and immersive tours.</p>
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="services">
-        <div class="section-container">
+        <div class="container">
             <h2>Our Tours</h2>
-            <div class="services-grid">
-                <div class="service-item">
+            <div class="service-grid">
+                <div class="service">
+                    <i class="fas fa-hiking"></i>
                     <h3>Mountain Adventures</h3>
-                    <p>Join us for a guided hike to the most scenic mountain peaks, perfect for nature lovers and adventure seekers.</p>
+                    <p>Scenic hikes to the most beautiful peaks, guided by experts.</p>
                 </div>
-                <div class="service-item">
+                <div class="service">
+                    <i class="fas fa-city"></i>
                     <h3>City Sightseeing</h3>
-                    <p>Discover the rich history and vibrant culture of cities with expert guides who know all the best spots.</p>
+                    <p>Explore vibrant cities with local insights and hidden gems.</p>
                 </div>
-                <div class="service-item">
+                <div class="service">
+                    <i class="fas fa-tree"></i>
                     <h3>Nature Walks</h3>
-                    <p>Relax and reconnect with nature on our leisurely walks through forests, parks, and nature reserves.</p>
+                    <p>Reconnect with nature on serene walks through forests and parks.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="section-container">
+        <div class="container">
             <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
+            <form action="thankyou.html" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Submit</button>
             </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Trail Buddy. All rights reserved.</p>
+        <p>&copy; 2023 Trail Buddy. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 </body>
+
 </html>

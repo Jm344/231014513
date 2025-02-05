@@ -1,46 +1,52 @@
 /* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header, section {
-    padding: 60px 20px;
-    text-align: center;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('cover-photo-mount-pulag.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    height: 100vh;
+    background: url('cover-photo-mount-pulag.jpg') no-repeat center center/cover;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
 .cta-button {
     background-color: #00aaff;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 15px 30px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
@@ -50,44 +56,168 @@ header, section {
 
 /* Navigation */
 .navbar {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar ul {
-    list-style-type: none;
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 0;
 }
 
-.navbar li {
-    display: inline;
-    margin: 0 15px;
+.burger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 0;
 }
 
-/* Section Styles */
-section {
-    background-color: #f4f4f4;
-}
-
-.section-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h2 {
+.about h2 {
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 /* Services Section */
-.services-grid {
+.services {
+    padding: 60px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-grid {
     display: grid;
-    grid
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service i {
+    font-size: 3rem;
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0077cc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
