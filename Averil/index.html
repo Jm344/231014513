@@ -2,90 +2,409 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trail Buddy - Your Trusted Tour Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail Buddy - Your Trusted Tour Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+/* General Styles */
+body {
+font-family: 'Poppins', sans-serif;
+/* Modern font */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: #333;
+/* Darker text for better contrast */
+}
+
+.container {
+max-width: 1200px;
+/* Wider container */
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+background-image: url('cover-photo-mount-pulag.jpg');
+background-size: cover;
+background-position: center;
+color: white;
+height: 60vh;
+/* Adjusted height */
+display: flex;
+flex-direction: column;
+/* Stack content vertically */
+justify-content: center;
+align-items: center;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+text-align: center;
+padding: 20px;
+/* Add padding */
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+.hero p {
+font-size: 1.2rem;
+/* Slightly smaller font */
+margin-bottom: 30px;
+}
+
+.cta-button {
+background-color: #00aaff;
+color: white;
+padding: 15px 30px;
+/* Larger button */
+text-decoration: none;
+border-radius: 5px;
+font-size: 1rem;
+font-weight: bold;
+/* Bold text */
+transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #0077cc;
+}
+
+/* Navigation */
+.navbar {
+background-color: #fff;
+/* White background */
+padding: 15px 0;
+/* Add padding */
+position: sticky;
+/* Sticky navbar */
+top: 0;
+z-index: 100;
+/* Ensure it's on top */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Add shadow */
+}
+
+.navbar.container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+text-decoration: none;
+color: #333;
+}
+
+.nav-links {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.nav-links li {
+margin-left: 20px;
+}
+
+.nav-links a {
+color: #333;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #00aaff;
+}
+
+.burger {
+display: none;
+/* Hide on larger screens */
+background: none;
+border: none;
+cursor: pointer;
+padding: 0;
+}
+
+.bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+background-color: #333;
+transition: background-color 0.3s ease;
+}
+
+
+/* Section Styles */
+section {
+padding: 60px 0;
+/* Adjusted padding */
+}
+
+h2 {
+font-size: 2rem;
+/* Adjusted font size */
+margin-bottom: 30px;
+text-align: center;
+}
+
+/* About Section */
+.about {
+background-color: #f9f9f9;
+}
+
+.about-image {
+max-width: 100%;
+/* Ensures image doesn't overflow its container */
+height: auto;
+/* Maintains aspect ratio */
+display: block;
+/* Prevents image from affecting text flow */
+margin: 20px auto;
+/* Centers the image */
+border-radius: 8px;
+/* Optional: Adds rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Optional: Adds a subtle shadow */
+}
+
+/* Services Section */
+.services {
+background-color: #f4f4f4;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Responsive grid */
+gap: 20px;
+}
+
+.service-item {
+background-color: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+transform: translateY(-5px);
+}
+
+.service-item i {
+font-size: 3rem;
+color: #00aaff;
+margin-bottom: 20px;
+}
+
+.learn-more {
+display: inline-block;
+background-color: #00aaff;
+color: white;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+margin-top: 20px;
+transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+background-color: #0077cc;
+}
+
+/* Contact Section */
+.contact {
+background-color: #f9f9f9;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+}
+
+input,
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+/* Responsive Styles (for smaller screens) */
+@media (max-width: 768px) {
+
+.nav-links {
+display: none;
+}
+
+.burger {
+display: block;
+}
+
+.nav-links.active {
+position: absolute;
+top: 65px;
+left: 0;
+width: 100%;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px 0;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.active li {
+margin: 10px 0;
+}
+
+.hero {
+height: 80vh;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+}
+</style>
 </head>
 
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <nav class="navbar">
-            <a href="#home" class="logo">Trail Buddy</a>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Our Tours</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="burger" onclick="toggleNav()">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </nav>
-        <div class="hero-content">
-            <h1>Explore the World with Trail Buddy</h1>
-            <p>Your trusted tour guides for unforgettable adventures</p>
-            <a href="#contact" class="cta-button">Book a Tour</a>
-        </div>
-    </header>
+<header class="hero">
+<nav class="navbar">
+<div class="container">
+<a href="#home" class="logo">Trail Buddy</a>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#services">Our Tours</a></li>
+<li><a href="#contact">Contact Us</a></li>
+</ul>
+<button class="burger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</button>
+</div>
+</nav>
+<div class="hero-content">
+<h1>Explore the World with Trail Buddy</h1>
+<p>Your trusted tour guides for unforgettable adventures</p>
+<a href="#contact" class="cta-button">Book a Tour</a>
+</div>
+</header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Trail Buddy</h2>
-            <p>At Trail Buddy, we craft bespoke journeys, connecting you with the essence of every place we visit. Experience travel like never before with our sustainable and immersive tours.</p>
-        </div>
-    </section>
+<section id="about" class="about">
+<div class="container">
+<h2>About Trail Buddy: Your Passport to Extraordinary Adventures</h2>
+<p>
+At Trail Buddy, we're not just tour guides; we're architects of unforgettable experiences. We believe that travel is more than just visiting a place – it's about immersing yourself in its soul, connecting with its people, and discovering hidden gems that guidebooks often miss. We craft bespoke journeys, meticulously curated to ignite your senses and leave you with memories that will last a lifetime.
+<p></p>
+Our commitment to sustainable and responsible tourism ensures that your travels not only enrich your own life but also contribute positively to the communities and environments we visit. We partner with local businesses, respect cultural sensitivities, and strive to minimize our impact on the natural world.
+</p>
+<p>
+So, are you ready to trade the mundane for the magnificent? Let Trail Buddy be your compass, your confidant, and your key to unlocking the world's most extraordinary adventures. Contact us today, and let's start planning your dream journey!
+</p>
+<img src="shutterstock_1246730032.webp" alt="About Us Image" class="about-image">
+</div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Tours</h2>
-            <div class="service-grid">
-                <div class="service">
-                    <i class="fas fa-hiking"></i>
-                    <h3>Mountain Adventures</h3>
-                    <p>Scenic hikes to the most beautiful peaks, guided by experts.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-city"></i>
-                    <h3>City Sightseeing</h3>
-                    <p>Explore vibrant cities with local insights and hidden gems.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-tree"></i>
-                    <h3>Nature Walks</h3>
-                    <p>Reconnect with nature on serene walks through forests and parks.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="services" class="services">
+<div class="container">
+<h2>Our Tours</h2>
+<div class="services-grid">
+<div class="service-item">
+<i class="fas fa-hiking"></i>
+<h3>Mountain Adventures</h3>
+<p>Join us for a guided hike to the most scenic mountain peaks, perfect for nature lovers and
+adventure seekers.</p>
+<a href="#" class="learn-more">Learn More</a>
+</div>
+<div class="service-item">
+<i class="fas fa-city"></i>
+<h3>City Sightseeing</h3>
+<p>Discover the rich history and vibrant culture of cities with expert guides who know all the
+best spots.</p>
+<a href="#" class="learn-more">Learn More</a>
+</div>
+<div class="service-item">
+<i class="fas fa-tree"></i>
+<h3>Nature Walks</h3>
+<p>Relax and reconnect with nature on our leisurely walks through forests, parks, and nature
+reserves.</p>
+<a href="#" class="learn-more">Learn More</a>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="thankyou.html" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="cta-button">Submit</button>
-            </form>
-        </div>
-    </section>
+<section id="contact" class="contact">
+<div class="container">
+<h2>Contact Us</h2>
+<p>Have questions or want to customize your tour? Fill out the form below and we'll get back to you
+shortly!</p>
+<form>
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+</div>
+<button type="submit" class="cta-button">Submit</button>
+</form>
+</div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 Trail Buddy. All rights reserved.</p>
-    </footer>
+<footer>
+<p>&copy; 2023 Trail Buddy. All rights reserved.</p>
+</footer>
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        function toggleNav() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-    </script>
+<script>
+// JavaScript for the burger menu
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+});
+</script>
 </body>
 
 </html>
